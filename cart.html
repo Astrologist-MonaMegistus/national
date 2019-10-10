@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>国庆购物车</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/carts.css">
+
+
+</head>
+<body>
+    <section class="cartMain">
+        <div class="cartMain_hd">
+            <ul class="order_lists cartTop">
+                <li class="list_chk list_qx">
+                   
+                    
+                    <!-- <input type="checkbox" id="all" class="whole_check" >
+                    <label for="all" ></label> -->
+                    <input type="checkbox"  checked="checked" class="whole_check">
+                    全选
+                </li>
+                <li class="list_con">商品信息</li>
+                <li class="list_info">商品参数</li>
+                <li class="list_price">单价</li>
+                <li class="list_amount">数量</li>
+                <li class="list_sum">金额</li>
+                <li class="list_op">操作</li>
+            </ul>
+        </div>
+        
+
+        <!-- <div class="cartBox">
+            <div class="shop_info">
+                <div class="all_check">
+                    
+                    <input type="checkbox" id="shop_a" class="shopChoice">
+                    <label for="shop_a" class="shop"></label>
+                </div>
+                <div class="shop_name">
+                    店铺：<a href="javascript:;">搜猎人艺术生活</a>
+                </div>
+            </div>
+            <div class="order_content">
+                <ul class="order_lists">
+                    <li class="list_chk">
+                        <input type="checkbox" id="checkbox_2" class="son_check">
+                        <label for="checkbox_2"></label>
+                    </li>
+                    <li class="list_con">
+                        <div class="list_img"><a href="javascript:;"><img src="images/1.png" alt=""></a></div>
+                        <div class="list_text"><a href="javascript:;">夏季男士迷彩无袖T恤圆领潮流韩版修身男装背心青年时尚打底衫男</a></div>
+                    </li>
+                    <li class="list_info">
+                        <p>规格：默认</p>
+                        <p>尺寸：16*16*3(cm)</p>
+                    </li>
+                    <li class="list_price">
+                        <p class="price">￥980</p>
+                    </li>
+                    <li class="list_amount">
+                        <div class="amount_box">
+                            <a href="javascript:;" class="reduce reSty">-</a>
+                            <input id=num_id type="text" value="1" class="sum">
+                            <a href="javascript:;" class="plus">+</a>
+                        </div>
+                    </li>
+                    <li class="list_sum">
+                        <p class="sum_price">￥980</p>
+                    </li>
+                    <li class="list_op">
+                        <p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
+                    </li>
+                </ul>
+            </div> 
+        </div> -->
+
+
+
+       
+        
+
+        
+
+
+
+       
+        <!-- <div class="bar-wrapper">
+            <div class="bar-right">
+                <div class="piece">已选商品<strong class="piece_num">0</strong>件</div>
+                <div class="totalMoney">共计: <strong class="total_text">0.00</strong></div>
+                <div class="calBtn"><a href="javascript:;">结算</a></div>
+            </div>
+        </div> -->
+    </section>
+    <section class="model_bg"></section>
+    <section class="my_model">
+        <p class="title">删除宝贝<span class="closeModel">X</span></p>
+        <p>您确认要删除该宝贝吗？</p>
+        <div class="opBtn"><a href="javascript:;" class="dialog-sure">确定</a><a href="javascript:;" class="dialog-close">关闭</a></div>
+    </section>
+	
+   <style>
+       .order_lists .list_chk input[type="checkbox"] {
+           position: relative;
+           left: 0px;
+           top:0px;
+
+       }
+   input[type="checkbox"] {
+       display: inline-block;
+   }
+   </style>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/carts.js"></script>
+    <script>
+        //查找用户 用户名
+    // var userId = localStorage.getItem('userId')
+    // var username = localStorage.getItem('username')
+    // if(!userId){
+    //     location.href = './login.html'
+    // }
+
+    //请求接口，显示数据
+
+    var userId=1
+//     function GetQueryString(name)
+// {
+//     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+// 	  var r = window.location.search.substr(1).match(reg); 
+// 	  if (r != null) return decodeURI(r[2]); return null; 
+// }
+// var goodsId = parseInt(GetQueryString("id"))
+// console.log(goodsId)
+// var userId=1 
+// var goodsImg =' ./goodslist/image/01.jpg'   
+// var goodsTitle =GetQueryString("goodstitle")
+// //onsole.log(GetQueryString("goodstitle"))
+// var goodsPrice =GetQueryString("goodsprice")
+// //console.log(GetQueryString("goodsprice"))
+// var buyNum = 2
+    $.ajax({
+        type:'get',
+        url:'http://127.0.0.1:3003/cartnode.js',
+        data:{userId},
+        dataType:'json',
+        success:function(res){
+            if(res.meta.status == 200){
+            
+                var html =''
+                $.each(res.data,function(index,item){
+                    var sumprice=parseFloat(item.goods_price)*parseFloat(item.buy_num)
+                    // <label for="checkbox__${index}"></label>
+                    html += `
+        <div class="cartBox" >
+            <div class="order_content">
+                <ul class="order_lists">
+                    
+                    <li class="list_chk">
+                        <input type="checkbox" id="checkbox_${index}" class="son_check label">
+                    </li>
+                    <li class="list_con">
+                        <div class="list_img"><a href="javascript:;"><img src="${item.goods_img}" alt=""></a></div>
+                        <div class="list_text" style="text-align:center;"><a href="javascript:;">${item.goods_title}</a></div>
+                    </li>
+                    <li class="list_info">
+                        
+                        <p></p>
+                        <p></p>
+                    </li>
+                    <li class="list_price">
+                        <p class="price">${item.goods_price}</p>
+                    </li>
+                    <li class="list_amount">
+                        <div class="amount_box">
+                            <a href="javascript:;" kc="${item.goods_num}" name="${item.goods_id}" class="reduce reSty">-</a>
+                            <input id="${item.goods_id}" type="text" value="${item.buy_num}" class="sum" kc="${item.goods_num}" name="${item.goods_id}">
+                            <a href="javascript:;" kc="${item.goods_num}" name="${item.goods_id}" class="plus">+</a>
+                        </div>
+                    </li>
+                    <li class="list_sum">
+                        <p class="sum_price" >￥${sumprice}</p>
+                    </li>
+                    <li class="list_op">
+                        <p class="del"><a href="javascript:;" name="${item.goods_id}" class="delBtn">移除商品</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+               `
+                })
+                $('section').append(html);
+            }
+        },
+        error:function(err){
+            console.log(err)
+        }
+    })
+    </script>
+</body>
+</html>
+
+
+
+
+
