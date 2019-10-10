@@ -6,7 +6,7 @@ function imgChange()
     t=setInterval(function(){
         i++;
         if(i==6) i=1;
-        imgObj.setAttribute("src","./goodslist/index/img/"+i+".png")
+        imgObj.setAttribute("src","./goodslist/index/img/"+i+".jpg")
     },1500)
 }
 imgChange();
@@ -15,7 +15,7 @@ let liOBjs=document.querySelectorAll(".lbs li");
 liOBjs.forEach(function(item,index){
     item.onmouseover=function(){
         clearInterval(t)
-        imgObj.setAttribute("src","./goodslist/index/img/"+(index+1)+".png")
+        imgObj.setAttribute("src","./goodslist/index/img/"+(index+1)+".jpg")
     }
     item.onmouseout=function(){
         imgChange();
@@ -31,7 +31,7 @@ leftObj.onmouseover=function(){
     leftObj.onclick=function(){
         i--;
         if(i==0) i=5
-        imgObj.setAttribute("src","./goodslist/index/img/"+i+".png")
+        imgObj.setAttribute("src","./goodslist/index/img/"+i+".jpg")
     }
 }
 leftObj.onmouseout=function(){
@@ -43,7 +43,7 @@ rightObj.onmouseover=function(){
     rightObj.onclick=function(){
         i++;
         if(i==6) i=1
-        imgObj.setAttribute("src","./goodslist/index/img/"+i+".png")
+        imgObj.setAttribute("src","./goodslist/index/img/"+i+".jpg")
     }
 }
 rightObj.onmouseout=function(){

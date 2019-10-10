@@ -1,8 +1,8 @@
 *{margin: 0;padding: 0;}
 
 .lbs{
-    width: 80%;
-    height: 75%;
+    width: 100%;
+    height: 100%;
     position: relative;
     margin: 100px auto;
 }
@@ -10,9 +10,11 @@
     width: 100%;
     height: 100%;
 }
+
+
 .lbs ul{
     position: absolute;
-    right: 40%;
+    right: 42%;
     bottom: 25px; 
 }
 .lbs li{

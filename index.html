@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
 <link rel="stylesheet" href="./goodslist/index/css/lbs.css">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,7 +25,8 @@
     <link href="https://www.17sucai.com/preview/1424582/2018-11-05/TheBell/assets/css/style.css" rel="stylesheet"/>
 
     <!-- Modernizer JS -->
-	<script src="https://www.17sucai.com/preview/1424582/2018-11-05/TheBell/assets/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="https://www.17sucai.com/preview/1424582/2018-11-05/TheBell/assets/js/vendor/modernizr-2.8.3.min.js"></script>
+    
 
     <!--[if lt IE 9]>
     <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -34,6 +34,44 @@
     <![endif]-->
 
 </head>
+<style type="text/css">
+ul.countdown {
+    list-style: none;
+    padding: 0;
+    display: block;
+    text-align: center;
+}
+
+ul.countdown li {
+    display: inline-block;
+}
+
+ul.countdown li span {
+    font-size: 80px;
+    font-weight: 300;
+    line-height: 80px;
+}
+
+ul.countdown li.seperator {
+    font-size: 80px;
+    line-height: 70px;
+    vertical-align: top;
+}
+
+ul.countdown li p {
+    color: #a7abb1;
+    font-size: 14px;
+}
+html,body{
+    background:rgb(247,247,247);
+}
+#main-navbar > li > a.arrow-toggle:after{
+    color: #fff
+}
+.preheader-area a i.fa,.arrow-toggle:after{
+    color: rgb(34,34,34)
+}
+</style>
 <body>
 
 <!--== Start Header Section ===-->
@@ -56,14 +94,16 @@
                     <div class="preheader-right-wrap">
                         <nav id="site-settings">
                             <ul class="nav justify-content-center justify-content-md-end">
-                                <li class="dropdown-show"><a href="my-account.html" class="arrow-toggle">My Account</a>
+                                <li class="dropdown-show"><a href="my-account.html" class="arrow-toggle">选项</a>
                                     <ul class="dropdown-nav">
+                                        <li><a href="login.html">登录</a></li>
+                                        <li><a class="logOff">退出登录</a></li>
                                         <li><a href="https://www.17sucai.com/preview/1424582/2018-11-05/TheBell/my-account.html">My Account</a></li>
                                         <li><a href="https://www.17sucai.com/preview/1424582/2018-11-05/TheBell/wishlist.html">Wishlist</a></li>
                                         <li><a href="https://www.17sucai.com/preview/1424582/2018-11-05/TheBell/cart.html">Shopping Cart</a></li>
                                         <li><a href="https://www.17sucai.com/preview/1424582/2018-11-05/TheBell/checkout.html">Checkout</a></li>
-                                        <li><a href="login.html">Login</a></li>
-                                    </ul>
+                                       
+                                    </ul>   
                                 </li>
 
                                 <li class="dropdown-show"><a href="#" class="arrow-toggle"><img
@@ -115,12 +155,12 @@
                                 </li>
                                 <li class="dropdown-show"><a href="#" class="arrow-toggle">Shop</a>
                                     <ul class="mega-menu-wrap dropdown-nav">
-                                        <li class="mega-menu-item"><a class="shop" href="./listing.html" class="mega-item-title">Shop
+                                        <li class="mega-menu-item"><a href="shop.html" class="mega-item-title">Shop
                                             Pages Layout</a>
                                             <ul>
                                                 <li><a href="shop-3-grid.html">Shop 3 Column</a></li>
                                                 <li><a href="shop-4-grid.html">Shop 4 Column</a></li>
-                                                <li><a class="shop" href="./listing.html">Shop Left Sidebar</a></li>
+                                                <li><a href="shop.html">Shop Left Sidebar</a></li>
                                                 <li><a href="shop-right-sidebar.html">Shop Right Sidebar</a></li>
                                                 <li><a href="shop-list.html">Shop Listing View</a></li>
                                                 <li><a href="shop-list-left-sidebar.html">Shop List left Sidebar</a>
@@ -209,14 +249,13 @@
                     <div class="header-configure-area d-flex justify-content-center justify-content-sm-end align-items-center">
                         <!-- Start Search Box -->
                         <div class="search-box-wrap">
-                            <button class="srch-icon animate-modal-popup" data-mfp-src="#search-box-popup"><i
-                                    class="fa fa-search"></i></button>
+                            <button class="srch-icon animate-modal-popup" data-mfp-src="#search-box-popup"></button>
                         </div>
                         <!-- End Search Box -->
 
                         <!-- Start Mini Cart Area -->
                         <div class="mini-cart-wrap">
-                            <button class="btn-minicart"><i class="fa fa-shopping-cart"></i>
+                            <button class="btn-minicart">
                                 <span class="count">4</span>
                                 <span>/</span>
                                 <span class="amount">$488.00</span>
@@ -295,7 +334,7 @@
                                         </div>
                                         <a href="single-product.html" class="remove-icon"><i class="fa fa-trash-o"></i></a>
                                     </div>
-                                    <!-- Single Cart Item End -->
+                                 
                                 </div>
                                 <div class="mini-cart-footer text-center">
                                     <a href="cart.html" class="btn btn-transparent btn-small mr-3">View Cart</a>
@@ -303,38 +342,21 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- End Mini Cart Area -->
+                    
                     </div>
                 </div>
-                <!-- Header Shop Cong Area -->
+           
             </div>
         </div>
     </div>
-    <!-- End Header Bottom  -->
 </header>
-<!--== End Header Section ===-->
 
-<!--== Start Search box Wrapper ==-->
-<div class="mfp-hide modalSearchBox" id="search-box-popup">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="search-box-wrapper">
-                <form action="#" method="POST" class="search-form-area">
-                    <input type="search" class="form-control" name="search" id="search" placeholder="Search">
-                    <button type="submit" class="btn btn-brand btn-search"><i class="fa fa-search"></i></button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-<!--== End Search box Wrapper ==-->
 
-<!--== Start Slider Area ==-->
+
 <section id="slider-area-wrap">
-   
-    <!-- 轮播图 -->
+
 	<div class="lbs">
-			<img src="./goodslist/index/img/1.png" alt="">
+			<img src="./goodslist/index/img/1.jpg" alt="">
 			<button class="left"><</button>
 			<button class="right">></button>
 			<ul>
@@ -359,9 +381,9 @@
                         <!-- Start Single Category Item -->
                         <div class="single-category-wrap">
                             <figure class="category-thumbnail">
-                                <a class="shop" href="./listing.html"><img src="https://www.17sucai.com/preview/1424582/2018-11-05/TheBell/assets/img/categories/category1.jpg" alt="Category"/></a>
+                                <a href="shop.html"><img src="https://www.17sucai.com/preview/1424582/2018-11-05/TheBell/assets/img/categories/category1.jpg" alt="Category"/></a>
                                 <figcaption class="category-name">
-                                    <a class="shop" href="./listing.html">Necklaces</a>
+                                    <a href="shop.html">Necklaces</a>
                                 </figcaption>
                             </figure>
                         </div>
@@ -370,9 +392,9 @@
                         <!-- Start Single Category Item -->
                         <div class="single-category-wrap">
                             <figure class="category-thumbnail">
-                                <a class="shop" href="./listing.html"><img src="https://www.17sucai.com/preview/1424582/2018-11-05/TheBell/assets/img/categories/category2.jpg" alt="Category"/></a>
+                                <a href="shop.html"><img src="https://www.17sucai.com/preview/1424582/2018-11-05/TheBell/assets/img/categories/category2.jpg" alt="Category"/></a>
                                 <figcaption class="category-name">
-                                    <a class="shop" href="./listing.html">Earrings</a>
+                                    <a href="shop.html">Earrings</a>
                                 </figcaption>
                             </figure>
                         </div>
@@ -381,9 +403,9 @@
                         <!-- Start Single Category Item -->
                         <div class="single-category-wrap">
                             <figure class="category-thumbnail">
-                                <a class="shop" href="./listing.html"><img src="https://www.17sucai.com/preview/1424582/2018-11-05/TheBell/assets/img/categories/category3.jpg" alt="Category"/></a>
+                                <a href="shop.html"><img src="https://www.17sucai.com/preview/1424582/2018-11-05/TheBell/assets/img/categories/category3.jpg" alt="Category"/></a>
                                 <figcaption class="category-name">
-                                    <a class="shop" href="./listing.html">Bracelets</a>
+                                    <a href="shop.html">Bracelets</a>
                                 </figcaption>
                             </figure>
                         </div>
@@ -392,9 +414,9 @@
                         <!-- Start Single Category Item -->
                         <div class="single-category-wrap">
                             <figure class="category-thumbnail">
-                                <a class="shop" href="./listing.html"><img src="https://www.17sucai.com/preview/1424582/2018-11-05/TheBell/assets/img/categories/category4.jpg" alt="Category"/></a>
+                                <a href="shop.html"><img src="https://www.17sucai.com/preview/1424582/2018-11-05/TheBell/assets/img/categories/category4.jpg" alt="Category"/></a>
                                 <figcaption class="category-name">
-                                    <a class="shop" href="./listing.html">Rings</a>
+                                    <a href="shop.html">Rings</a>
                                 </figcaption>
                             </figure>
                         </div>
@@ -403,9 +425,9 @@
                         <!-- Start Single Category Item -->
                         <div class="single-category-wrap">
                             <figure class="category-thumbnail">
-                                <a class="shop" href="./listing.html"><img src="https://www.17sucai.com/preview/1424582/2018-11-05/TheBell/assets/img/categories/category5.jpg" alt="Category"/></a>
+                                <a href="shop.html"><img src="https://www.17sucai.com/preview/1424582/2018-11-05/TheBell/assets/img/categories/category5.jpg" alt="Category"/></a>
                                 <figcaption class="category-name">
-                                    <a class="shop" href="./listing.html">Pendants</a>
+                                    <a href="shop.html">Pendants</a>
                                 </figcaption>
                             </figure>
                         </div>
@@ -414,9 +436,9 @@
                         <!-- Start Single Category Item -->
                         <div class="single-category-wrap">
                             <figure class="category-thumbnail">
-                                <a class="shop" href="./listing.html"><img src="https://www.17sucai.com/preview/1424582/2018-11-05/TheBell/assets/img/categories/category6.jpg" alt="Category"/></a>
+                                <a href="shop.html"><img src="https://www.17sucai.com/preview/1424582/2018-11-05/TheBell/assets/img/categories/category6.jpg" alt="Category"/></a>
                                 <figcaption class="category-name">
-                                    <a href="./listing.html">Scarf</a>
+                                    <a href="shop.html">Scarf</a>
                                 </figcaption>
                             </figure>
                         </div>
@@ -425,10 +447,11 @@
                 </div>
             </div>
         </div>
+
         <div class="row">
             <div class="col-lg-12 text-center">
                 <div class="category-sale-message">
-                    <h4>SALE ON SELECT TODD REED, ARMENTA, ADOLOFO COURRIER AND MORE. <a href="./listing.html">SHOP DENVER’S
+                    <h4>SALE ON SELECT TODD REED, ARMENTA, ADOLOFO COURRIER AND MORE. <a href="shop.html">SHOP DENVER’S
                         TOP JEWELRY BOUTIQUE</a></h4>
                 </div>
             </div>
@@ -436,10 +459,9 @@
     </div>
 </div>
 <div id="main"></div>
-<!--== End Categories Gallery ==-->
+<!-- <img src="./goodslist/" alt=""> -->
 <script src="./jQuery.js"></script>
 <script>
-    //商品展示
     if(!localStorage.getItem('name')){
         location.href="./login.html"
     }
@@ -449,17 +471,14 @@
 		dataType: 'json',
 		success: function(res){
 			var html = ''
-			// console.log(res)  res.data
 			$.each(res.data, function(index, item){
-				// item就是数组中一个个对象
-				// 一个个对象 对应 一条条 数据
 				html += `
 				<div class="single-product-item">
                     
                     <figure class="product-thumbnail">
                         <a href="single-product-sticky-left.html" class="d-block">
                             <img class="primary-thumb" src="./goodslist/${item.goods_img}" alt="Product"/>
-                            <img class="secondary-thumb" src="./goodslist/${item.goods_img}" alt="Product"/>
+                            <img class="secondary-thumb" src="${item.goods_img}" alt="Product"/>
                         </a>
                         <figcaption class="product-hvr-content">
                             
@@ -485,42 +504,15 @@
     })
     
 
-     // 1.获取cookie信息
-    var cookieinfo = document.cookie
 
-    // 优化：检测是否是合法数据
-    // 先获取到uname和token 然后按照同样的算法 检测是否数据被修改过
-    var cookieArr = document.cookie.split(';')
-    // cookieArr ['uname=xxx', 'token=xxx']
-    // cookieArr[0] = 'uname=xxx'
-    // cookieArr[1] = 'token=xxx'
-    var uname = cookieArr[0].split('=')[1]
-    var token = cookieArr[1].split('=')[1]
-    // console.log(uname)
-    // console.log(token)
-    if (md5(uname) != token) {// 代表数据被修改过
-        //1.清除登录信息(遍历清除)
-        document.cookie.split(';').forEach(function(item){
-            // item  键=值
-            var keyName = item.split('=')[0]
-            var d = new Date()
-            d.setTime( d.getTime() - 1)
-            document.cookie = `${keyName}=清除; expires=${d.toUTCString()}`
-        })
-        //2.重新登录
-        alert('请登录....')
-        location.href = './login.html'
-        // console.log(document.cookie)
-    }
 
-    // 2.检测cookie中否有uname
-    //   有-登录   不管
-    // 没有-未登录 跳转到login.html
-    if (cookieinfo.indexOf('uname') == -1) {
-        alert('请登录,跳转中....')
-        location.href = './login.html'
-    }
+//退出登录
+$('.logOff').click(function(){
+    sessionStorage.clear()
+})
+
 </script>
+
 
 <!--== Start Top Interesting Product Area ==-->
 <section id="products-area-wrapper">
@@ -535,6 +527,34 @@
                 </div>
             </div>
         </div>
+        <ul class="countdown">
+                <li> <span class="days">00</span>
+                <p class="days_ref">days</p>
+                </li>
+                <li class="seperator">.</li>
+                <li> <span class="hours">00</span>
+                <p class="hours_ref">hours</p>
+                </li>
+                <li class="seperator">:</li>
+                <li> <span class="minutes">00</span>
+                <p class="minutes_ref">minutes</p>
+                </li>
+                <li class="seperator">:</li>
+                <li> <span class="seconds">00</span>
+                <p class="seconds_ref">seconds</p>
+                </li>
+                </ul>
+                <script type="text/javascript" src="http://www.jq22.com/demo/jQuery-countdown20160105/js/jquery.downCount.js"></script>
+                <script class="source" type="text/javascript">
+                        $('.countdown').downCount({
+                            date: '10/13/2019 00:00:00',
+                            offset: +10
+                        }, function () {
+                            alert('倒计时结束!');
+                        });
+                    </script>
+       
+                
         <!-- End Section Title Area -->
 
         <!-- Start Products Content Wrapper -->
@@ -564,7 +584,7 @@
                     <p>We believe everyone deserves the truth. That’s why we’re bringing radical transparency to
                         modernluxury by providing access to 100% authentic jewelry and watches at a fraction of the
                         retail price.</p>
-                    <a href="./listing.html" class="btn btn-transparent">发现更多</a>
+                    <a href="shop.html" class="btn btn-transparent">Find Out More</a>
                 </div>
             </div>
         </div>
@@ -1444,7 +1464,7 @@
 <!--== End Footer Section ===-->
 
 <!-- Scroll to Top Start -->
-<a href="#" class="scrolltotop"><i class="fa fa-angle-double-up"></i></a>
+<a href="#" class="scrolltotop"></a>
 <!-- Scroll to Top End -->
 
 <!--== Start Quick View Content ==-->
@@ -1611,5 +1631,6 @@
 <!--=== Active Js ===-->
 <script src="https://www.17sucai.com/preview/1424582/2018-11-05/TheBell/assets/js/active.js"></script>
 <script src="./goodslist/index/js/lbs.js"></script>
+
 </body>
 </html>
